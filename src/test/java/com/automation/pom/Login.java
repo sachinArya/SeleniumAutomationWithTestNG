@@ -1,4 +1,4 @@
-package pom;
+package com.automation.pom;
 
 import com.automation.FindElement;
 import com.automation.ObjectInteractions;
