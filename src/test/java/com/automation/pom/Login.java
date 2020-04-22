@@ -14,19 +14,19 @@ public class Login {
     public static void enterUserName(String name) throws Exception
     {
         WebElement elem = FindElement.findElement(userName);
-        ObjectInteractions.EnterKeys(elem,name);
+        ObjectInteractions.enterKeys(elem,name);
     }
 
     public static void enterPassword(String pass) throws Exception
     {
         WebElement elem = FindElement.findElement(password);
-        ObjectInteractions.EnterKeys(elem,pass);
+        ObjectInteractions.enterKeys(elem,pass);
     }
 
     public static void clickLogin() throws Exception
     {
         WebElement elem = FindElement.findElement(loginBtn);
-        ObjectInteractions.Click(elem);
+        ObjectInteractions.click(elem);
     }
 
 

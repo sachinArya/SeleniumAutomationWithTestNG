@@ -3,16 +3,23 @@ package com.automation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.Connection;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.network.Network;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
+import sun.nio.ch.Net;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.Properties;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class DriverSetup {
 
+    public static HashSet<String> OpenRequests = new HashSet<>();
+    public static int cntr =0;
     private static WebDriver driver = null;
 
     public static WebDriver getDriver()
@@ -57,6 +64,25 @@ public class DriverSetup {
                     default:
                         break;
                 }
+
+                Connection connection = null;
+                DevTools devTools = ((ChromeDriver)driver).getDevTools();
+
+                devTools.createSession();
+                devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
+
+               devTools.addListener(Network.requestWillBeSent(), (requestWillBeSent -> {
+                    OpenRequests.add(requestWillBeSent.getRequestId().toString());
+                    System.out.println("Request Sent : " + requestWillBeSent.getRequestId() );
+                }));
+
+                devTools.addListener(Network.responseReceived(), (responseReceived -> {
+                    if(OpenRequests.contains(responseReceived.getRequestId().toString()))
+                    {
+                        OpenRequests.remove(responseReceived.getRequestId().toString());
+                    }
+                    System.out.println("Response received : " +  responseReceived.getRequestId());
+                }));
 
                 return driver;
             }
