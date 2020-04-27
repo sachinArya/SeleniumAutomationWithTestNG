@@ -29,5 +29,12 @@ public class Login {
         ObjectInteractions.click(elem);
     }
 
+    public static void loginApplication(String name, String password) throws Exception
+    {
+        enterUserName(name);
+        enterPassword(password);
+        clickLogin();
+    }
+
 
 }

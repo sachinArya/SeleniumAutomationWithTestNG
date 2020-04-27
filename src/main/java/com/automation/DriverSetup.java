@@ -13,25 +13,21 @@ import sun.nio.ch.Net;
 
 import java.io.File;
 import java.io.FileReader;
+import java.sql.Timestamp;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DriverSetup {
 
     public static HashSet<String> OpenRequests = new HashSet<>();
-    public static int cntr =0;
+    public static int cntr = 0;
     private static WebDriver driver = null;
 
-    public static WebDriver getDriver()
-    {
-        try
-        {
-            if(driver !=null)
-            {
+    public static WebDriver getDriver() {
+        try {
+            if (driver != null) {
                 return driver;
-            }
-            else
-            {
+            } else {
                 String dirPath = System.getProperty("user.dir");
                 File file = new File(dirPath + "//conf//DriverSetup.properties");
                 FileReader reader = new FileReader(file);
@@ -41,8 +37,7 @@ public class DriverSetup {
 
                 String browser = props.getProperty("Browser");
 
-                switch(browser)
-                {
+                switch (browser) {
                     case "IE":
                         InternetExplorerOptions IEOptions = new InternetExplorerOptions();
                         IEOptions.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
@@ -54,6 +49,7 @@ public class DriverSetup {
                         System.setProperty("webdriver.chrome.driver", dirPath + "\\webdrivers\\chromedriver.exe");
                         ChromeOptions chromeOptions = new ChromeOptions();
                         chromeOptions.addArguments("--incognito");
+                        chromeOptions.addArguments("--log-level=3");
                         driver = new ChromeDriver(chromeOptions);
                         driver.manage().window().maximize();
                         break;
@@ -65,30 +61,27 @@ public class DriverSetup {
                         break;
                 }
 
-                Connection connection = null;
-                DevTools devTools = ((ChromeDriver)driver).getDevTools();
+                /*Connection connection = null;
+                DevTools devTools = ((ChromeDriver) driver).getDevTools();
 
                 devTools.createSession();
                 devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
 
-               devTools.addListener(Network.requestWillBeSent(), (requestWillBeSent -> {
+                devTools.addListener(Network.requestWillBeSent(), (requestWillBeSent -> {
                     OpenRequests.add(requestWillBeSent.getRequestId().toString());
-                    System.out.println("Request Sent : " + requestWillBeSent.getRequestId() );
+                    System.out.println("Request Sent : " + requestWillBeSent.getRequestId());
                 }));
 
                 devTools.addListener(Network.responseReceived(), (responseReceived -> {
-                    if(OpenRequests.contains(responseReceived.getRequestId().toString()))
-                    {
+                    if (OpenRequests.contains(responseReceived.getRequestId().toString())) {
                         OpenRequests.remove(responseReceived.getRequestId().toString());
                     }
-                    System.out.println("Response received : " +  responseReceived.getRequestId());
-                }));
+                    System.out.println("Response received : " + responseReceived.getRequestId());
+                })); */
 
                 return driver;
             }
-        }
-        catch(Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
         return driver;
