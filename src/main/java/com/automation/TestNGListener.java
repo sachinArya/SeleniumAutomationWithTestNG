@@ -1,10 +1,17 @@
 package com.automation;
 
 import com.enums.TestSummary;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import javafx.collections.FXCollections;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class TestNGListener implements ITestListener {
@@ -25,9 +32,9 @@ public class TestNGListener implements ITestListener {
         testContext.getCurrentXmlTest().getSuite().getName();
 
         passedTest.add(new TestSummary(result.getMethod().getDescription(),
-                result.getTestClass().toString(),
+                result.getTestClass().getName(),
                 result.getMethod().getMethodName(),
-                (result.getStartMillis()-result.getEndMillis())/1000,
+                (result.getEndMillis()-result.getStartMillis())/1000,
                 "PASS",
                 testContext.getCurrentXmlTest().getSuite().getName(),
                 testContext.getCurrentXmlTest().getSuite().getFileName()));
@@ -39,9 +46,9 @@ public class TestNGListener implements ITestListener {
         testContext.getCurrentXmlTest().getSuite().getName();
 
         failedTest.add(new TestSummary(result.getMethod().getDescription(),
-                result.getTestClass().toString(),
+                result.getTestClass().getName(),
                 result.getMethod().getMethodName(),
-                (result.getStartMillis()-result.getEndMillis())/1000,
+                (result.getEndMillis()-result.getStartMillis())/1000,
                 "FAIL",
                 testContext.getCurrentXmlTest().getSuite().getName(),
                 testContext.getCurrentXmlTest().getSuite().getFileName()));
@@ -53,9 +60,9 @@ public class TestNGListener implements ITestListener {
         testContext.getCurrentXmlTest().getSuite().getName();
 
         skippedTest.add(new TestSummary(result.getMethod().getDescription(),
-                result.getTestClass().toString(),
+                result.getTestClass().getName(),
                 result.getMethod().getMethodName(),
-                (result.getStartMillis()-result.getEndMillis())/1000,
+                (result.getEndMillis()-result.getStartMillis())/1000,
                 "SKIP",
                 testContext.getCurrentXmlTest().getSuite().getName(),
                 testContext.getCurrentXmlTest().getSuite().getFileName()));
@@ -78,6 +85,25 @@ public class TestNGListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
+        try {
+            ArrayList<TestSummary> allTest = new ArrayList<>();
+            allTest.addAll(passedTest);
+            allTest.addAll(failedTest);
+            allTest.addAll(skippedTest);
+
+            JsonArray jsonArray = new Gson().toJsonTree(allTest).getAsJsonArray();
+
+            String path = System.getProperty("user.dir") + "\\Results\\JsonReport.json";
+
+            FileWriter fw = new FileWriter(path);
+            BufferedWriter writer = new BufferedWriter(fw);
+            fw.append(jsonArray.toString());
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 }
