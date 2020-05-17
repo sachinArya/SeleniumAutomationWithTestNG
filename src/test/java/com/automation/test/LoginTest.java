@@ -27,12 +27,13 @@ public class LoginTest extends testNGHooks{
     @Test(groups = {"myTest"},description = "Test To Login to application")
     public static void Login() throws Exception
     {
-        DriverSetup.getDriver().get("http://51.140.244.192:7802/insis_gen_v10/faces/login.jspx");
-        com.automation.pom.Login.enterUserName("insis_gen_v10");
-        com.automation.pom.Login.enterPassword("insis_gen_v10");
+        DriverSetup.getDriver().get("http://www.amazon.co.uk");
+        com.automation.pom.LandingPage.clickSignIn();
+        com.automation.pom.Login.enterUserName("abc@gmail.com");
+        com.automation.pom.Login.clickContinue();
+        com.automation.pom.Login.enterPassword("test");
         com.automation.pom.Login.clickLogin();
-        DriverSetup.getDriver().get("https://www.google.com/");
-        System.out.println("cntr = " + DriverSetup.cntr);
+        Thread.sleep(4000);
     }
 
 }

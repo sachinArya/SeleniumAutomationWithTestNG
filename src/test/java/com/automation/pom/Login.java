@@ -7,9 +7,10 @@ import org.openqa.selenium.WebElement;
 
 public class Login {
 
-    private static By userName = By.xpath("//*[@id='pt1:pt_s2:usrname::content']");
-    private static By password = By.xpath("//*[@id='pt1:pt_s2:pswd::content']");
-    private static By loginBtn = By.xpath("//*[@id='pt1:pt_s2:login']");
+    private static By userName = By.xpath("//*[@id='ap_email']");
+    private static By btnContinue = By.xpath("//*[@id='continue']");
+    private static By password = By.xpath("//*[@id='ap_password']");
+    private static By loginBtn = By.xpath("//*[@id='signInSubmit']");
 
     public static void enterUserName(String name) throws Exception
     {
@@ -23,6 +24,12 @@ public class Login {
         ObjectInteractions.enterKeys(elem,pass);
     }
 
+    public static void clickContinue() throws Exception
+    {
+        WebElement elem = FindElement.findElement(btnContinue);
+        ObjectInteractions.click(elem);
+    }
+
     public static void clickLogin() throws Exception
     {
         WebElement elem = FindElement.findElement(loginBtn);
@@ -32,6 +39,7 @@ public class Login {
     public static void loginApplication(String name, String password) throws Exception
     {
         enterUserName(name);
+        clickContinue();
         enterPassword(password);
         clickLogin();
     }

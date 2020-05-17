@@ -3,8 +3,6 @@ package com.automation;
 import com.enums.TestSummary;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import javafx.collections.FXCollections;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
