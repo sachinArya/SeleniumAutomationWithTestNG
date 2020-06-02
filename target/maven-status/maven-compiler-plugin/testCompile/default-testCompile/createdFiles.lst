@@ -1,0 +1,5 @@
+com\automation\pom\Login.class
+com\automation\pom\LandingPage.class
+com\automation\test\testNGHooks.class
+com\automation\pom\LeftNavigations.class
+com\automation\test\LoginTest.class

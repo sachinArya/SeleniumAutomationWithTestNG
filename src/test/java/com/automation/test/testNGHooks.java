@@ -1,6 +1,7 @@
 package com.automation.test;
 
 import com.automation.DriverSetup;
+import com.automation.Utils;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -9,8 +10,9 @@ import java.util.Iterator;
 public class testNGHooks {
 
     @BeforeSuite
-    public void Setup()
+    public void Setup() throws Exception
     {
+        Utils.createTestReportFolder();
         DriverSetup.getDriver();
     }
     @AfterSuite

@@ -1,13 +1,17 @@
 package com.automation;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import java.io.File;
+import java.util.List;
+
 
 public class ObjectInteractions {
 
-    public static void enterKeys(WebElement element, String keys) throws Exception{
-            element.sendKeys(keys);
+    public static void enterKeys(WebDriver driver,WebElement element, String keys) throws Exception{
+        moveToElement(driver,element);
+        element.sendKeys(keys);
        /* System.out.println("element = " + element.getText());
             if (!(element.getText().equalsIgnoreCase(keys)))
                 throw new Exception("Value not entered properly");
@@ -15,19 +19,40 @@ public class ObjectInteractions {
         */
     }
 
-    public static void click(WebElement element) throws Exception{
+    public static void click(WebDriver driver,WebElement element) throws Exception{
+        moveToElement(driver,element);
         element.click();
     }
 
-    public static void moveToElement(WebElement element) throws Exception
+    public static void moveToElement(WebDriver driver, WebElement element) throws Exception
     {
-        Actions builder = new Actions(DriverSetup.getDriver());
+        Actions builder = new Actions(driver);
         builder.moveToElement(element);
     }
 
-    public static void moveToElementAndClick(WebElement element) throws Exception
+    public static void takeScreenShot(WebDriver driver) throws Exception
     {
-        moveToElement(element);
-        click(element);
+        TakesScreenshot scrnshot = (TakesScreenshot)driver;
+        File src = scrnshot.getScreenshotAs(OutputType.FILE);
+        String pathDir = System.getProperty("user.dir") + "//Results//" + Utils.getCurrentTimeStamp();
+        new File(pathDir).mkdirs();
+        new File(pathDir + "//screenshots").mkdirs();
+        //FileUtils.copyFile(src,);
     }
+
+    public String getCookie(WebDriver driver,String name) throws Exception
+    {
+        String cookieValue = "";
+        for(Cookie cookie : driver.manage().getCookies())
+        {
+            if(cookie.getName().equals(name))
+            {
+                cookieValue = cookie.getValue();
+                break;
+            }
+        }
+
+        return cookieValue;
+    }
+
 }

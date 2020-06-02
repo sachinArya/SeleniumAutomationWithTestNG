@@ -4,14 +4,25 @@
     <listeners>
         <listener class-name="com.automation.TestNGListener"></listener>
     </listeners>
-    <test name="Test">
+    <test name="Test1">
         <classes>
             <class name="com.automation.test.LoginTest">
-                <!--<methods>
-                    <exclude name="testFunc1"></exclude>
-                    <exclude name="mynewtest"></exclude>
-                </methods>-->
+                <methods>
+                    <include name="searchProduct"></include>
+                </methods>
             </class>
         </classes>
     </test> <!-- Test -->
+
+   <!-- <test name="Test2">
+        <parameter name="URL" value="http://www.amazon.co.uk"></parameter>
+        <groups>
+            <run>
+                <include name="myTest"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.automation.test"></package>
+        </packages>
+    </test>-->
 </suite> <!-- Suite -->

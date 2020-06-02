@@ -60,7 +60,7 @@ public class DriverSetup {
                     default:
                         break;
                 }
-
+/*
                 Connection connection = null;
                 DevTools devTools = ((ChromeDriver) driver).getDevTools();
 
@@ -77,7 +77,7 @@ public class DriverSetup {
                         OpenRequests.remove(responseReceived.getRequestId().toString());
                     }
                     System.out.println("Response received : " + responseReceived.getRequestId());
-                }));
+                }));*/
 
                 return driver;
             }
