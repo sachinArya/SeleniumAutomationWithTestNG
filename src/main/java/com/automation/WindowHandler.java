@@ -22,7 +22,11 @@ public class WindowHandler {
                 driver.switchTo().window(parentWindow);
             }
         }
+    }
 
+    public void navigateTo(WebDriver driver, String url) throws Exception
+    {
+        driver.navigate().to(url);
     }
 
 }

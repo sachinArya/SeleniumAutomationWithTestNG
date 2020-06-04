@@ -40,19 +40,4 @@ public class ObjectInteractions {
         //FileUtils.copyFile(src,);
     }
 
-    public String getCookie(WebDriver driver,String name) throws Exception
-    {
-        String cookieValue = "";
-        for(Cookie cookie : driver.manage().getCookies())
-        {
-            if(cookie.getName().equals(name))
-            {
-                cookieValue = cookie.getValue();
-                break;
-            }
-        }
-
-        return cookieValue;
-    }
-
 }
