@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="12336" started-at="2020-05-30T12:04:27 BST" finished-at="2020-05-30T12:04:39 BST">
+  <suite name="Suite" duration-ms="20993" started-at="2020-06-11T09:47:40 BST" finished-at="2020-06-11T09:48:01 BST">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="12336" started-at="2020-05-30T12:04:27 BST" finished-at="2020-05-30T12:04:39 BST">
+    <test name="Test1" duration-ms="20993" started-at="2020-06-11T09:47:40 BST" finished-at="2020-06-11T09:48:01 BST">
       <class name="com.automation.test.LoginTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.automation.test.LoginTest@26d820eb]" name="Setup" is-config="true" duration-ms="11935" started-at="2020-05-30T12:04:15 BST" finished-at="2020-05-30T12:04:27 BST">
+        <test-method status="PASS" signature="Setup()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="Setup" is-config="true" duration-ms="65224" started-at="2020-06-11T09:46:34 BST" finished-at="2020-06-11T09:47:40 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="searchProduct()[pri:0, instance:com.automation.test.LoginTest@26d820eb]" name="searchProduct" duration-ms="12262" started-at="2020-05-30T12:04:27 BST" description="Search Product" finished-at="2020-05-30T12:04:39 BST">
+        <test-method status="PASS" signature="searchProduct()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="searchProduct" duration-ms="20919" started-at="2020-06-11T09:47:40 BST" description="Search Product" finished-at="2020-06-11T09:48:01 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.test.LoginTest@26d820eb]" name="tearDown" is-config="true" duration-ms="1638" started-at="2020-05-30T12:04:39 BST" finished-at="2020-05-30T12:04:41 BST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="tearDown" is-config="true" duration-ms="1205" started-at="2020-06-11T09:48:01 BST" finished-at="2020-06-11T09:48:02 BST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

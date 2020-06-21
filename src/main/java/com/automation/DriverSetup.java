@@ -3,19 +3,16 @@ package com.automation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.devtools.Connection;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.network.Network;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
-import sun.nio.ch.Net;
 
 import java.io.File;
 import java.io.FileReader;
-import java.sql.Timestamp;
+
 import java.util.*;
-import java.util.concurrent.atomic.AtomicInteger;
+
 
 public class DriverSetup {
 

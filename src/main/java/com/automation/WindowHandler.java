@@ -11,6 +11,7 @@ public class WindowHandler {
         String parentWindow = driver.getWindowHandle();
         Set<String> windows = driver.getWindowHandles();
 
+
         for(String wndw:windows)
         {
             if(driver.switchTo().window(wndw).getTitle().equals(title))
