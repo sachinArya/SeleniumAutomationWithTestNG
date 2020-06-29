@@ -1,7 +1,13 @@
 C:\SeleniumAutomation\src\main\java\com\automation\FindElement.java
+C:\SeleniumAutomation\src\main\java\com\automation\Utils.java
+C:\SeleniumAutomation\src\main\java\com\automation\Wait.java
+C:\SeleniumAutomation\src\main\java\com\automation\AjaxHandler.java
+C:\SeleniumAutomation\src\main\java\com\automation\AlertHandler.java
+C:\SeleniumAutomation\src\main\java\com\automation\TestNGListener.java
+C:\SeleniumAutomation\src\main\java\com\automation\CookieHandler.java
+C:\SeleniumAutomation\src\main\java\com\automation\ObjectInteractions.java
 C:\SeleniumAutomation\src\main\java\com\automation\DriverSetup.java
 C:\SeleniumAutomation\src\main\java\com\enums\TestSummary.java
-C:\SeleniumAutomation\src\main\java\com\automation\Utils.java
-C:\SeleniumAutomation\src\main\java\com\automation\AjaxHandler.java
-C:\SeleniumAutomation\src\main\java\com\automation\TestNGListener.java
-C:\SeleniumAutomation\src\main\java\com\automation\ObjectInteractions.java
+C:\SeleniumAutomation\src\main\java\com\automation\BrowserNavigations.java
+C:\SeleniumAutomation\src\main\java\com\automation\IFrameHandler.java
+C:\SeleniumAutomation\src\main\java\com\automation\WindowHandler.java

@@ -16,23 +16,19 @@ import java.util.*;
 
 public class DriverSetup {
 
-    public static HashSet<String> OpenRequests = new HashSet<>();
     public static int cntr = 0;
-    private static WebDriver driver = null;
 
     public static WebDriver getDriver() {
+        WebDriver driver = null;
+
         try {
-            if (driver != null) {
-                return driver;
-            } else {
                 String dirPath = System.getProperty("user.dir");
                 File file = new File(dirPath + "//conf//DriverSetup.properties");
-                FileReader reader = new FileReader(file);
 
-                Properties props = new Properties();
-                props.load(reader);
+                Properties prop = new Properties();
+                prop.load(new FileReader(file));
 
-                String browser = props.getProperty("Browser");
+                String browser = prop.getProperty("Browser");
 
                 switch (browser) {
                     case "IE":
@@ -47,6 +43,7 @@ public class DriverSetup {
                         ChromeOptions chromeOptions = new ChromeOptions();
                         chromeOptions.addArguments("--incognito");
                         chromeOptions.addArguments("--log-level=3");
+                        chromeOptions.setExperimentalOption("useAutomationExtension",false);
                         driver = new ChromeDriver(chromeOptions);
                         driver.manage().window().maximize();
                         break;
@@ -57,27 +54,9 @@ public class DriverSetup {
                     default:
                         break;
                 }
-/*
-                Connection connection = null;
-                DevTools devTools = ((ChromeDriver) driver).getDevTools();
-
-                devTools.createSession();
-                devTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-
-                devTools.addListener(Network.requestWillBeSent(), (requestWillBeSent -> {
-                    OpenRequests.add(requestWillBeSent.getRequestId().toString());
-                    System.out.println("Request Sent : " + requestWillBeSent.getRequestId());
-                }));
-
-                devTools.addListener(Network.responseReceived(), (responseReceived -> {
-                    if (OpenRequests.contains(responseReceived.getRequestId().toString())) {
-                        OpenRequests.remove(responseReceived.getRequestId().toString());
-                    }
-                    System.out.println("Response received : " + responseReceived.getRequestId());
-                }));*/
 
                 return driver;
-            }
+
         } catch (Exception ex) {
             ex.printStackTrace();
         }

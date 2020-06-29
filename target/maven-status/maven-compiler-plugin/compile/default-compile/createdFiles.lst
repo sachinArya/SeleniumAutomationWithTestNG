@@ -1,12 +1,13 @@
 com\automation\BrowserNavigations.class
 com\automation\FindElement.class
-com\automation\ObjectInteractions.class
 com\enums\TestSummary.class
 com\automation\IFrameHandler.class
-com\automation\Wait.class
 com\automation\Utils.class
 com\automation\TestNGListener.class
 com\automation\CookieHandler.class
-com\automation\AjaxHandler.class
+com\automation\AlertHandler.class
 com\automation\DriverSetup.class
+com\automation\ObjectInteractions.class
+com\automation\Wait.class
+com\automation\AjaxHandler.class
 com\automation\WindowHandler.class

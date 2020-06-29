@@ -1,25 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
+<testng-results skipped="3" failed="0" ignored="0" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="20993" started-at="2020-06-11T09:47:40 BST" finished-at="2020-06-11T09:48:01 BST">
+  <suite name="Suite" duration-ms="86" started-at="2020-06-29T13:48:51 BST" finished-at="2020-06-29T13:48:51 BST">
     <groups>
+      <group name="myTest">
+        <method signature="LoginTestParallelMethod.Login(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="Login" class="com.automation.test.LoginTestParallelMethod"/>
+      </group> <!-- myTest -->
     </groups>
-    <test name="Test1" duration-ms="20993" started-at="2020-06-11T09:47:40 BST" finished-at="2020-06-11T09:48:01 BST">
-      <class name="com.automation.test.LoginTest">
-        <test-method status="PASS" signature="Setup()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="Setup" is-config="true" duration-ms="65224" started-at="2020-06-11T09:46:34 BST" finished-at="2020-06-11T09:47:40 BST">
+    <test name="Test1" duration-ms="86" started-at="2020-06-29T13:48:51 BST" finished-at="2020-06-29T13:48:51 BST">
+      <class name="com.automation.test.LoginTestParallelMethod">
+        <test-method status="FAIL" signature="setupClass(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="setupClass" is-config="true" duration-ms="-1593434931312" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method status="PASS" signature="searchProduct()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="searchProduct" duration-ms="20919" started-at="2020-06-11T09:47:40 BST" description="Search Product" finished-at="2020-06-11T09:48:01 BST">
+        </test-method> <!-- setupClass -->
+        <test-method status="SKIP" signature="setupMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="setupMethod" is-config="true" duration-ms="-1593434931349" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.automation.test.LoginTest@416d56f2]" name="tearDown" is-config="true" duration-ms="1205" started-at="2020-06-11T09:48:01 BST" finished-at="2020-06-11T09:48:02 BST">
+        </test-method> <!-- setupMethod -->
+        <test-method status="SKIP" signature="setupMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="setupMethod" is-config="true" duration-ms="-1593434931349" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.automation.test.LoginTest -->
+        </test-method> <!-- setupMethod -->
+        <test-method status="SKIP" signature="setupMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="setupMethod" is-config="true" duration-ms="-1593434931349" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupMethod -->
+        <test-method status="SKIP" signature="searchLenovo(org.testng.ITestContext)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="searchLenovo" duration-ms="0" started-at="2020-06-29T13:48:51 BST" description="Search Lenovo" finished-at="2020-06-29T13:48:51 BST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchLenovo -->
+        <test-method status="SKIP" signature="Login(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="Login" duration-ms="0" started-at="2020-06-29T13:48:51 BST" description="Test To Login to application" finished-at="2020-06-29T13:48:51 BST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="SKIP" signature="searchThanos(org.testng.ITestContext)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="searchThanos" duration-ms="0" started-at="2020-06-29T13:48:51 BST" description="Search Thanos" finished-at="2020-06-29T13:48:51 BST">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:458)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:372)
+at org.testng.internal.Parameters.createParameters(Parameters.java:729)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:164)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:275)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchThanos -->
+        <test-method status="SKIP" signature="tearDownMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="tearDownMethod" is-config="true" duration-ms="-1593434931363" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="SKIP" signature="tearDownMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="tearDownMethod" is-config="true" duration-ms="-1593434931363" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="SKIP" signature="tearDownMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="tearDownMethod" is-config="true" duration-ms="-1593434931363" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="SKIP" signature="tearDownClass(org.testng.ITestContext)[pri:0, instance:com.automation.test.LoginTestParallelMethod@181b8c4b]" name="tearDownClass" is-config="true" duration-ms="-1593434931365" started-at="2020-06-29T13:48:51 BST" finished-at="1970-01-01T01:00:00 GMT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.automation.test.LoginTestParallelMethod -->
     </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>
