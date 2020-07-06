@@ -19,8 +19,7 @@ public class Wait {
 
     public void waitTillClickable(WebDriver driver, int timeInSeconds, By by) throws Exception
     {
-        Duration duration = Duration.ofSeconds(timeInSeconds);
-        WebDriverWait oWait = new WebDriverWait(driver,duration);
+        WebDriverWait oWait = new WebDriverWait(driver,120);
         oWait.until(ExpectedConditions.elementToBeClickable(by));
     }
 

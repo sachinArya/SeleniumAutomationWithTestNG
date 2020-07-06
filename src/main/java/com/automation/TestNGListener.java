@@ -72,11 +72,6 @@ public class TestNGListener implements ITestListener {
     }
 
     @Override
-    public void onTestFailedWithTimeout(ITestResult result) {
-
-    }
-
-    @Override
     public void onStart(ITestContext context) {
 
     }

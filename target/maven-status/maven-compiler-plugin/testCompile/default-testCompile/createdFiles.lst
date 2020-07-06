@@ -1,5 +1,9 @@
-com\automation\pom\Login.class
-com\automation\test\LoginTestParallelMethod.class
+com\automation\testNG\SearchProduct.class
+com\automation\cucumber\CucumberTestRunner.class
+com\automation\testNG\LoginTestParallelMethod.class
 com\automation\pom\LandingPage.class
-com\automation\test\testNGHooks.class
+com\automation\testNG\testNGHooks.class
+com\automation\cucumber\searchProduct_stepdef.class
+com\automation\pom\Login.class
+com\automation\cucumber\loginAmazon_stepdef.class
 com\automation\pom\LeftNavigations.class

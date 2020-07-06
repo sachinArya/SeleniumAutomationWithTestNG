@@ -1,6 +1,9 @@
 C:\SeleniumAutomation\src\test\java\com\automation\pom\LeftNavigations.java
-C:\SeleniumAutomation\src\test\java\com\automation\test\LoginTestParallelClasses.java
-C:\SeleniumAutomation\src\test\java\com\automation\test\LoginTestParallelMethod.java
-C:\SeleniumAutomation\src\test\java\com\automation\test\testNGHooks.java
+C:\SeleniumAutomation\src\test\java\com\automation\testNG\SearchProduct.java
+C:\SeleniumAutomation\src\test\java\com\automation\cucumber\loginAmazon_stepdef.java
+C:\SeleniumAutomation\src\test\java\com\automation\testNG\LoginTestParallelMethod.java
 C:\SeleniumAutomation\src\test\java\com\automation\pom\Login.java
+C:\SeleniumAutomation\src\test\java\com\automation\cucumber\CucumberTestRunner.java
+C:\SeleniumAutomation\src\test\java\com\automation\testNG\testNGHooks.java
+C:\SeleniumAutomation\src\test\java\com\automation\cucumber\searchProduct_stepdef.java
 C:\SeleniumAutomation\src\test\java\com\automation\pom\LandingPage.java

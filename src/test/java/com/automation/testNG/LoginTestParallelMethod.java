@@ -1,13 +1,9 @@
-package com.automation.test;
+package com.automation.testNG;
 
-import com.automation.DriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.MethodHandles;
 
 public class LoginTestParallelMethod extends testNGHooks{
 

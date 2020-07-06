@@ -1,10 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 1, Errors: 0, Skipped: 8, Time elapsed: 2.038 s <<< FAILURE! - in TestSuite
-setupClass(com.automation.test.LoginTestParallelMethod)  Time elapsed: 1.552 s  <<< FAILURE!
-org.testng.TestNGException: 
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 2.206 s <<< FAILURE! - in TestSuite
+searchThanos(com.automation.testNG.SearchProduct)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.automation.testNG.SearchProduct.searchThanos(SearchProduct.java:16)
 
-Can inject only one of <ITestContext, XmlTest> into a @BeforeClass annotated setupClass.
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+Login(com.automation.testNG.LoginTestParallelMethod)  Time elapsed: 0.024 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.automation.testNG.LoginTestParallelMethod.Login(LoginTestParallelMethod.java:17)
+
+searchThanos(com.automation.testNG.SearchProduct)  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.automation.testNG.SearchProduct.searchThanos(SearchProduct.java:16)
 
